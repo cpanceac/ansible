@@ -1,0 +1,9 @@
+---
+# Make sure all packages are up to date
+- name: Update your system
+  hosts: put.your.own.ip_or_hostname_here
+  tasks:
+  - name: Make sure all packages are up to date
+    dnf:
+      name: "*"
+      state: latest
