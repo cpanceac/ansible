@@ -1,9 +1,17 @@
 ---
 # Make sure all packages are up to date
-- name: Update your system
-  hosts: put.your.own.ip_or_hostname_here
+- name: Update your systems
+  hosts: fedorahost, centoshost, rhelhost
   tasks:
-  - name: Make sure all packages are up to date
+  - name: Update RPM-based systems
     dnf:
       name: "*"
       state: latest
+
+hosts: debianhost1, debhost2
+  tasks:
+  - name: Update DEB-based systems
+    apt:
+      name: '*'
+      state: latest
+      update_cache: yes
