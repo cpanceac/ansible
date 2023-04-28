@@ -1,16 +1,23 @@
 ---
 # Make sure all packages are up to date
-- name: Update your systems
-  hosts: fedorahost, centoshost, rhelhost
+- name: Update RPM-based systems
+  gather_facts: false
+  ignore_errors: true
+  ignore_unreachable: true
+  hosts: fedora
   tasks:
-  - name: Update RPM-based systems
+  - name: One
     dnf:
-      name: "*"
-      state: latest
+     name: "*"
+     state: latest
 
-hosts: debianhost1, debhost2
+- name: Update your DEB-based systems
+  gather_facts: false
+  ignore_errors: true
+  ignore_unreachable: true
+  hosts: debian
   tasks:
-  - name: Update DEB-based systems
+  - name: Two
     apt:
       name: '*'
       state: latest
