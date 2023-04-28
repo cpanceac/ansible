@@ -6,7 +6,7 @@
   ignore_unreachable: true
   hosts: fedora
   tasks:
-  - name: One
+  - name:
     dnf:
      name: "*"
      state: latest
@@ -17,7 +17,7 @@
   ignore_unreachable: true
   hosts: debian
   tasks:
-  - name: Two
+  - name:
     apt:
       name: '*'
       state: latest
