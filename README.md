@@ -13,4 +13,4 @@ Update one system:
 $ ansible-playbook -T 30 -b --ask-become-pass  dnf_update.yaml 
 
 Please note the usage of [fedora] and [debian] sections from /etc/ansible/hosts file.
-Also please not that the formatiing is very important, wrong formatting will make your playbook unusable.
+Also please note that the formatting is very important: wrong formatting will make your playbook unusable, or at least can lead to unexpected behaviour.
