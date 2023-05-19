@@ -1,0 +1,7 @@
+- name: Unconditionally shut down the Linux machine with all defaults
+  hosts: myhost
+  gather_facts: no
+
+  tasks:
+  - name: Shutdown the specific host
+    shell: shutdown
